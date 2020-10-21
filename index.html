@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webcam Tricks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="photobooth">
+    <div class="controls">
+      
+      <input name ="filter" type = "radio" id="original">Original</input>
+      <input name ="filter" type = "radio" id="green">Green Filter</input>
+      <input name ="filter" type = "radio" id="rgb"></input>
+      <input name ="filter" type = "radio" id="greenscreen"></input>
+
+
+       <div id="sliders" class="rgb">
+        <label for="rmin">Red Min:</label>
+        <input type="range" min=0 max=255 name="rmin">
+        <label for="rmax">Red Max:</label>
+        <input type="range" min=0 max=255 name="rmax">
+        <br>
+        <label for="gmin">Green Min:</label>
+        <input type="range" min=0 max=255 name="gmin">
+        <label for="gmax">Green Max:</label>
+        <input type="range" min=0 max=255 name="gmax">
+        <br>
+        <label for="bmin">Blue Min:</label>
+        <input type="range" min=0 max=255 name="bmin">
+        <label for="bmax">Blue Max:</label>
+        <input type="range" min=0 max=255 name="bmax">
+      </div> 
+    </div>
+
+    <div id="frame">
+  
+
+      <p class="number top-left" style="margin:0">1,000</p>
+      <p class="number top-right" style="margin:0">1,000</p>
+      <canvas class="photo"></canvas>
+      <p class="number bottom-left" style="margin:0">1,000</p>
+      <p class="number bottom-right" style="margin:0">1,000</p>
+    </div>
+    
+    <video class="player"></video>
+    <div class="strip"></div>
+  </div>
+
+  <audio class="snap" src="./snap.mp3" hidden></audio> 
+
+  <script src="script.js"></script>
+
+</body>
+</html>
